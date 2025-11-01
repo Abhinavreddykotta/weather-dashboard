@@ -9,5 +9,3 @@ npm install
 ```
 npm start
 ```
-
-The `.env` file is included and populated with the WeatherAPI key and Google Client ID you provided.
