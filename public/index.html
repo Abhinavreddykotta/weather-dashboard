@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Analytics Dashboard</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script id="weather-layers-script">
+(function(){
+  function createRain(){
+    const container = document.createElement('div');
+    container.className = 'rain-layer';
+    for(let i=0;i<80;i++){
+      const drop = document.createElement('div');
+      drop.className='rain-drop';
+      drop.style.left = Math.random()*100 + '%';
+      drop.style.animationDelay = (Math.random()*-1)+'s';
+      drop.style.opacity = 0.2 + Math.random()*0.6;
+      drop.style.height = 8 + Math.random()*28 + 'px';
+      container.appendChild(drop);
+    }
+    return container;
+  }
+  function createSnow(){
+    const container = document.createElement('div');
+    container.className = 'snow-layer';
+    for(let i=0;i<60;i++){
+      const s = document.createElement('div');
+      s.className = 'snowflake';
+      s.style.left = Math.random()*100 + '%';
+      s.style.animationDuration = (8 + Math.random()*12) + 's';
+      s.style.opacity = 0.5 + Math.random()*0.6;
+      s.style.width = (4 + Math.random()*10) + 'px';
+      s.style.height = s.style.width;
+      container.appendChild(s);
+    }
+    return container;
+  }
+  function createClouds(){
+    const c = document.createElement('div');
+    c.className = 'clouds-layer';
+    const inner = document.createElement('div');
+    inner.className = 'clouds';
+    c.appendChild(inner);
+    return c;
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    document.body.appendChild(createClouds());
+    document.body.appendChild(createRain());
+    document.body.appendChild(createSnow());
+  });
+})();
+</script>
+  </body>
+</html>
