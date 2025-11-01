@@ -1,10 +1,3 @@
-# Weather Analytics Dashboard
-
-This project includes:
-- Assignment-required features: Dashboard, detailed view, search & favorites, charts, settings, real-time updates.
-- Weather-themed UI with dynamic themes and animations.
-- Google Sign-In enabled (uses Google Identity Services).
-
 ## Setup
 
 1. Install dependencies:
